@@ -1,11 +1,20 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Парсинг страниц{% endblock %}
+{% block title %}Монеты{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Парсинг страниц</h1>
-        <p>Парсинг страница моего сайта!!!</p>
-        <button class="btn btn-warning">На страницу про нас</button>
+        <h1>Монеты</h1>
+        {% if coins %}
+            {% for elem in coins %}
+                <div class="alert alert-warning">
+                    <h3>{{ elem.title }}</h3>
+                    <p>{{ elem.desription }}</p>
+                    <p> Cтоимость 1 монеты: <i>{{ elem.cost }}$</i></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Монеты не найдены, попробуйте позже</p>
+        {% endif %}
     </div>
 {% endblock %}

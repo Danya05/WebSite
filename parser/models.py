@@ -6,7 +6,7 @@ class Coins(models.Model):
     desription = models.CharField('Описание монеты', max_length=250)
     capitalization = models.IntegerField('Капитализация монеты')
     cost = models.IntegerField('Стоимость 1 монеты')
-    date = models.DateTimeField('Время последнего лобновления')
+    date = models.DateTimeField('Время последнего обновления')
 
     def __str__(self):
         return self.title
