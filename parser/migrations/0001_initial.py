@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=50, verbose_name='Название монеты')),
-                ('desription', models.CharField(max_length=250, verbose_name='Описание монеты')),
+                ('description', models.CharField(max_length=250, verbose_name='Описание монеты')),
                 ('capitalization', models.IntegerField(verbose_name='Капитализация монеты')),
                 ('cost', models.IntegerField(verbose_name='Стоимость 1 монеты')),
                 ('date', models.DateTimeField(verbose_name='Время последнего лобновления')),

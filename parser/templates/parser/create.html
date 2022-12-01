@@ -7,14 +7,12 @@
         <h1>Форма по добавлению монеты</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form }}
-
-            <input type="text" placeholder="Название монеты" class="form-control"><br>
-            <input type="text" placeholder="Описание монеты" class="form-control"><br>
-            <input type="text" placeholder="Капитализация" class="form-control"><br>
-            <input type="text" placeholder="Стоимость" class="form-control"><br>
-            <input type="date" class="form-control"><br>
-            <input type="time" class="form-control"><br>
+            {{ form.title }}<br>
+            {{ form.description }}<br>
+            {{ form.capitalization }} <br>
+            {{ form.cost }} <br>
+            {{ form.date }} <br>
+            <span>{{ error }}</span>
             <button class="btn btn-success" type="submit"> Добавить монету</button>
         </form>
     </div>
