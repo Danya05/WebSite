@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Монеты{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ coin.title }}</h1>
+        <p>{{ coin.description }}</p>
+        <p><h4><b> Cтоимость 1 монеты: <i>{{ coin.cost }}$</i></b></h4></p>
+    </div>
+{% endblock %}

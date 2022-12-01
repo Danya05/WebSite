@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import Coins
 from .forms import CoinsForm
+from django.views.generic import DetailView, ListView
 
 
 def parser_home(request):
-    coins = Coins.objects.order_by('capitalization')
+    coins = Coins.objects.order_by('-capitalization')
     return render(request, 'parser/parser_home.html', {'coins': coins})
 
+
+class CoinsDetailView(DetailView):
+    model = Coins
+    template_name = 'parser/details_view.html'
+    context_object_name = 'coin'
 
 def create(request):
     error = ''

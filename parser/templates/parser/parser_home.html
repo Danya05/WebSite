@@ -10,7 +10,8 @@
                 <div class="alert alert-warning">
                     <h3>{{ elem.title }}</h3><br>
                     <h5>Описание:</h5><p> {{ elem.description }}</p>
-                    <p><h4><b> Cтоимость 1 монеты: <i>{{ elem.cost }}$</i></b></h4></p>
+                    <p><h4><b> Cтоимость 1 монеты: <i>{{ elem.cost }}$</i></b></h4>
+                    <a href="{% url 'coins-detail' elem.id %}" class="btn btn-warning">Читать далее</a>
                 </div>
             {% endfor %}
         {% else %}
