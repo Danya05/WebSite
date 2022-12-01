@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Coins
 from .forms import CoinsForm
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def parser_home(request):
@@ -13,6 +13,19 @@ class CoinsDetailView(DetailView):
     model = Coins
     template_name = 'parser/details_view.html'
     context_object_name = 'coin'
+
+
+class CoinsUpdateView(UpdateView):
+    model = Coins
+    template_name = 'parser/create.html'
+    form_class = CoinsForm
+
+
+class CoinsDeleteView(DeleteView):
+    model = Coins
+    success_url = '/parser/'
+    template_name = 'parser/coins_delete.html'
+
 
 def create(request):
     error = ''

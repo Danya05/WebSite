@@ -7,5 +7,7 @@
         <h1>{{ coin.title }}</h1>
         <p>{{ coin.description }}</p>
         <p><h4><b> Cтоимость 1 монеты: <i>{{ coin.cost }}$</i></b></h4></p>
+        <a href="{% url 'coins-delete' coin.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'coins-update' coin.id %}" class="btn btn-info">Редактировать</a>
     </div>
 {% endblock %}
