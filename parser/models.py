@@ -17,3 +17,13 @@ class Coins(models.Model):
     class Meta:
         verbose_name = 'Монета'
         verbose_name_plural = 'Монеты'
+
+
+class CoinsParsingResult(models.Model):
+    task_id = models.ForeignKey(
+        Coins,
+        blank=True,
+        null=True,
+        on_delete=models.PROTECT
+    )
+    cost = models.FloatField()

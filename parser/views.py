@@ -27,6 +27,12 @@ class CoinsDeleteView(DeleteView):
     template_name = 'parser/coins_delete.html'
 
 
+class CoinsParseView(DeleteView):
+    model = Coins
+    success_url = '/parser/'
+    template_name = 'parser/coins_parse.html'
+
+
 def create(request):
     error = ''
     if request.method == 'POST':

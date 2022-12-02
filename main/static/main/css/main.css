@@ -1,5 +1,6 @@
 body {
     background: #2c2c2c;
+    font-family: Monospaced, monospace;
 }
 
 aside {
@@ -10,6 +11,7 @@ aside {
     height: 200vh;
     color: #fff;
     border-right: 5px solid #424242;
+    font-family: Monospaced, monospace;
 }
 
 aside img {
@@ -28,6 +30,7 @@ aside .logo {
 aside h3 {
     margin-top: 50px;
     font-size: 28px;
+    font-family: Monospaced, monospace;
 }
 
 aside ul {list-style: none}
@@ -37,12 +40,14 @@ aside ul li{
     display: block;
     margin-top: 10px;
     transition: transform .6s ease;
+    font-family: Monospaced, monospace;
 }
 
 aside ul li:hover, aside ul a:hover {
     color: #eb5959;
     text-decoration: none;
     transform: scale(1.2);
+    font-family: Monospaced, monospace;
 }
 
 main .features {
@@ -55,6 +60,42 @@ main .features {
 
 main .features h1 {font-size: 50px}
 main .features p {max-width: 400px; margin: 20px auto}
+
+main ol {
+    margin-left: 20px;
+    font-size: 20px;
+    color: antiquewhite;
+    float: left;
+    text-align: -webkit-left;
+}
+
+main i {
+    margin-left: 20px;
+    color: #70f5d2;
+    float: left;
+    text-align: -webkit-left;
+}
+
+main h4 {
+    margin-left: 20px;
+    color: #8dcaff;
+    float: left;
+    text-align: -webkit-left;
+}
+
+main h5 {
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+main ul {
+    font-size: 20px;
+    margin-left: 20px;
+    color: #8dcaff;
+    float: left;
+    text-align: -webkit-left;
+}
 
 .alert-warning {
     float: left;

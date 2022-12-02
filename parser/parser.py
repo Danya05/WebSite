@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from .models import Coins
 
 
-class parse_bitcoin:
+def parse_bitcoin():
     prev_value = 0
 
     URL = 'https://coinmarketcap.com/currencies/bitcoin/'
