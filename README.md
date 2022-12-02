@@ -1,5 +1,5 @@
 <h1> Для запуска </h1>
-<code>git clone https://github.com/Danya05/WebSite</code><br>
+<code>git clone https://github.com/Danya05/WebSite.git</code><br>
 <code>cd WebSite</code><br>
 <code>git checkout dev</code><br>
 <code>sudo apt install python3-pip</code><br>
